@@ -23,7 +23,7 @@ let state = {
 };
 
 // ----------------------
-// 介入データ（30パターン）
+// 介入データ
 // ----------------------
 
 const INTERVENTIONS = {
@@ -79,8 +79,6 @@ const INTERVENTIONS = {
 };
 
 // ----------------------
-// 画面切替
-// ----------------------
 
 function showScreen(name) {
   Object.values(screens).forEach(screen => {
@@ -89,20 +87,12 @@ function showScreen(name) {
   screens[name].classList.add("active");
 }
 
-// ----------------------
-// 感情選択
-// ----------------------
-
 document.querySelectorAll("[data-emotion]").forEach(btn => {
   btn.addEventListener("click", () => {
     state.emotion = btn.dataset.emotion;
     showScreen("structure");
   });
 });
-
-// ----------------------
-// 構造選択
-// ----------------------
 
 document.querySelectorAll("[data-structure]").forEach(btn => {
   btn.addEventListener("click", () => {
@@ -111,10 +101,6 @@ document.querySelectorAll("[data-structure]").forEach(btn => {
   });
 });
 
-// ----------------------
-// 介入表示
-// ----------------------
-
 function showIntervention() {
   showScreen("intervention");
 
@@ -122,9 +108,7 @@ function showIntervention() {
     || ["いまは一度、止まってみてください。", "感情は事実ではありません。"];
 
   interventionText.innerHTML = lines.join("<br>");
-
   saveHistory();
-
   typeQuestion("整いましたか？");
 }
 
@@ -138,25 +122,15 @@ function typeQuestion(text) {
   }, 90);
 }
 
-// ----------------------
-// 履歴保存
-// ----------------------
-
 function saveHistory() {
   const history = JSON.parse(localStorage.getItem("pauseHistory") || "[]");
-
   history.unshift({
     timestamp: new Date().toISOString(),
     emotion: state.emotion,
     structure: state.structure
   });
-
   localStorage.setItem("pauseHistory", JSON.stringify(history.slice(0, 30)));
 }
-
-// ----------------------
-// 履歴画面
-// ----------------------
 
 historyBtn.addEventListener("click", () => {
   renderHistory();
@@ -204,10 +178,6 @@ function translateStructure(key) {
   };
   return map[key] || key;
 }
-
-// ----------------------
-// 閉じる
-// ----------------------
 
 closeBtn.addEventListener("click", () => {
   showScreen("emotion");
