@@ -10,13 +10,13 @@
 
   <!-- 感情選択 -->
   <div id="screen-emotion" class="screen active">
-   <div id="screen-emotion" class="screen active">
-  <div class="top-bar">
-    <button id="historyBtn" class="small-btn">履歴</button>
-  </div>
 
- <h1>その一言の前に。</h1>
-    
+    <div class="top-bar">
+      <button id="historyBtn" class="small-btn">履歴</button>
+    </div>
+
+    <h1>その一言の前に。</h1>
+
     <div class="buttons">
       <button data-emotion="anger">怒り</button>
       <button data-emotion="anxiety">不安</button>
@@ -31,11 +31,11 @@
   <div id="screen-structure" class="screen">
     <h2>いま引っかかっているのは？</h2>
     <div class="buttons">
-      <button data-structure="eval">どう見られるか</button>
-      <button data-structure="expect">思い通りかどうか</button>
-      <button data-structure="compare">他の人と比べて</button>
-      <button data-structure="control">自分で動かせるか</button>
-      <button data-structure="uncertain">先がわからない</button>
+      <button data-structure="eval">👁️ どう見られるか</button>
+      <button data-structure="expect">🎯 思い通りかどうか</button>
+      <button data-structure="compare">↔️ 他の人と比べて</button>
+      <button data-structure="control">🧭 自分で動かせるか</button>
+      <button data-structure="uncertain">❓ 先がわからない</button>
     </div>
   </div>
 
@@ -45,12 +45,13 @@
     <div id="question" class="question"></div>
     <button id="closeBtn">閉じる</button>
   </div>
- 
-　<div id="screen-history" class="screen">
-  　<h2>履歴</h2>
-  　<div id="historyList"></div>
-  　<button id="backBtn">戻る</button>
-　</div>
+
+  <!-- 履歴画面 -->
+  <div id="screen-history" class="screen">
+    <h2>履歴</h2>
+    <div id="historyList"></div>
+    <button id="backBtn">戻る</button>
+  </div>
 
   <script src="app.js"></script>
 </body>
