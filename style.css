@@ -63,3 +63,17 @@ h1, h2 {
   border-radius: 10px;
   color: #ffffff;
 }
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.small-btn {
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+}
+
