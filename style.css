@@ -55,7 +55,7 @@ h1, h2 {
   min-height: 30px;
 }
 
-#closeBtn {
+#closeBtn, #backBtn {
   margin-top: 30px;
   padding: 10px 20px;
   background: transparent;
@@ -63,6 +63,7 @@ h1, h2 {
   border-radius: 10px;
   color: #ffffff;
 }
+
 .top-bar {
   display: flex;
   justify-content: flex-end;
@@ -76,4 +77,3 @@ h1, h2 {
   border-radius: 8px;
   font-size: 12px;
 }
-
