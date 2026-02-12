@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PAUSE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 感情選択 -->
+  <div id="screen-emotion" class="screen active">
+    <h1>その一言の前に。</h1>
+    <div class="buttons">
+      <button data-emotion="anger">怒り</button>
+      <button data-emotion="anxiety">不安</button>
+      <button data-emotion="haste">焦り</button>
+      <button data-emotion="sadness">悲しみ</button>
+      <button data-emotion="confusion">混乱</button>
+      <button data-emotion="disgust">嫌悪</button>
+    </div>
+  </div>
+
+  <!-- 構造選択 -->
+  <div id="screen-structure" class="screen">
+    <h2>いま引っかかっているのは？</h2>
+    <div class="buttons">
+      <button data-structure="eval">どう見られるか</button>
+      <button data-structure="expect">思い通りかどうか</button>
+      <button data-structure="compare">他の人と比べて</button>
+      <button data-structure="control">自分で動かせるか</button>
+      <button data-structure="uncertain">先がわからない</button>
+    </div>
+  </div>
+
+  <!-- 介入表示 -->
+  <div id="screen-intervention" class="screen">
+    <div id="intervention-text"></div>
+    <div id="question" class="question"></div>
+    <button id="closeBtn">閉じる</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
