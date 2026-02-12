@@ -10,7 +10,13 @@
 
   <!-- 感情選択 -->
   <div id="screen-emotion" class="screen active">
-    <h1>その一言の前に。</h1>
+   <div id="screen-emotion" class="screen active">
+  <div class="top-bar">
+    <button id="historyBtn" class="small-btn">履歴</button>
+  </div>
+
+ <h1>その一言の前に。</h1>
+    
     <div class="buttons">
       <button data-emotion="anger">怒り</button>
       <button data-emotion="anxiety">不安</button>
@@ -39,6 +45,12 @@
     <div id="question" class="question"></div>
     <button id="closeBtn">閉じる</button>
   </div>
+ 
+　<div id="screen-history" class="screen">
+  　<h2>履歴</h2>
+  　<div id="historyList"></div>
+  　<button id="backBtn">戻る</button>
+　</div>
 
   <script src="app.js"></script>
 </body>
