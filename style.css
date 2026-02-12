@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0F172A;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.screen {
+  display: none;
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+}
+
+.screen.active {
+  display: block;
+}
+
+h1, h2 {
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.buttons button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 12px;
+}
+
+.buttons button:active {
+  opacity: 0.7;
+}
+
+#intervention-text {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  min-height: 80px;
+}
+
+.question {
+  margin-top: 20px;
+  font-size: 16px;
+  opacity: 0.8;
+  min-height: 30px;
+}
+
+#closeBtn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  color: #ffffff;
+}
